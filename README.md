@@ -1,8 +1,8 @@
-# Midterm Exam Coding Questions
+# Description
 
-You will be building a distributed cache solution using UDP as transport protocol. Here is how the caching protocol works:
+This repository buils a distributed cache solution using UDP as transport protocol. Here is how the caching protocol works:
 
-# PART I (15 points)
+
 
 ## PUT
 
@@ -106,11 +106,11 @@ Your job is to implement GET operation so that the GET response will have bytes 
 b'\x80\x03}q\x00(X\t\x00\x00\x00operationq\x01X\x03\x00\x00\x00PUTq\x02X\x02\x00\x00\x00idq\x03X \x00\x00\x009ad5794ec94345c4873c4e591788743aq\x04X\x07\x00\x00\x00payloadq\x05}q\x06X\x04\x00\x00\x00userq\x07X\x03\x00\x00\x00Fooq\x08su.'
 ```
 
-# PART II (15 points)
 
-The current solution only talks to a single server (index 0). You will be splitting (sharding) data into all four servers listed in server_config.py.
 
-Data sharding via Naive hashing is implemented in node_ring.py. You must use the def get_node(self, key_hex) function from the NodeRing() class to shard all users data into four nodes.
+## Data Sharding
+
+Data sharding is done via Naive hashing is implemented in node_ring.py. 
 
 ### FROM
 
